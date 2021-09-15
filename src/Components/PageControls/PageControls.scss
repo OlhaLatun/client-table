@@ -1,0 +1,28 @@
+.page-controls {
+    text-align: center;
+    margin: 10px 50px;
+    button {
+        border: none;
+        padding: 10px 20px;
+        background-color: #770f7d92;
+        cursor: pointer;
+        &:first-child {
+            border-radius: 20px 0 0 20px;
+            &:focus {
+             background-color: #770f7d92;
+            }
+        }
+        &:last-child {
+            border-radius: 0 20px 20px 0;
+            &:focus {
+             background-color: #770f7d92;
+            }
+        }
+        &:hover {
+             background-color: #770f7d;
+        }
+        &:focus {
+             background-color: #e8e8e8;
+        }
+    }
+}

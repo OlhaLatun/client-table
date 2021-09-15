@@ -1,0 +1,24 @@
+.description-panel {
+    margin: 20px auto;
+    width: 80vw;
+    height: 300px;
+    background-color: #c50cce5f;
+    border-radius: 20px;
+    h3 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        .col {
+            padding-left: 40px;
+            ul li {
+               list-style: none;
+            }
+        }
+    
+    }
+}

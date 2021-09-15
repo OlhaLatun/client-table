@@ -1,0 +1,26 @@
+
+$bg-color:  #770f7d;
+
+.search-panel {
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color:$bg-color;
+     svg path {
+            fill: #fff;
+     }
+    .search-input {
+        border: none;
+        padding: 1rem 2rem;
+        background-color: $bg-color;
+        color: #fff;;
+        outline: none;
+        &::placeholder {
+            color:#fff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

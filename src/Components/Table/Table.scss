@@ -1,0 +1,59 @@
+.table {
+    margin: 2rem auto;
+    border-spacing: 0;
+    text-align: center;
+      border-spacing:  0  1rem;
+    .table-head {
+        color: #fff;
+        background: linear-gradient(18deg, rgba(193,84,213,1) 25%, rgba(144,37,171,1) 75%);
+      
+       tr td {
+        position: relative;
+        font-weight: 500;
+        padding: 1rem 2rem;
+            &:first-child {
+                border-radius: 20px 0 0 20px;
+            }
+            &:last-child {
+                border-radius:  0 20px 20px 0;
+            }
+            .sort-icon {
+                position: absolute;
+                top: 1.4rem;
+                right: 1rem;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                border-left: 10px solid rgb(255, 255, 255);
+                transition: transform 0.7s ease-in;
+                cursor: pointer;
+                &:hover {
+                    border-left: 10px solid rgb(85, 0, 255);
+                }
+            }
+
+            .sort-icon_asc {
+                @extend .sort-icon;
+                 transform: rotate(90deg);
+                  transition: transform 0.7s ease-in;
+            }
+
+             .sort-icon_desc {
+                @extend .sort-icon;
+                 transform: rotate(-90deg);
+                  transition: transform 0.7s ease-in;
+            }
+       }
+    }
+
+    .table-body {
+        tr:nth-child(odd) {
+            background: linear-gradient(18deg, rgba(193,84,213, 0.3) 25%, rgba(144,37,171,0.3) 75%);    
+        }
+        tr:nth-child(even) {
+            background: linear-gradient(18deg, rgba(142, 140, 143, 0.3) 25%, rgba(194, 189, 194, 0.3) 75%);    
+        }
+        tr td {
+        padding: 0.5rem;
+        }
+    }
+}
