@@ -29,7 +29,7 @@ export default function PageControls({ clientsNumber, getPage }) {
     return (
         <div className='page-controls'>
             <button className='btn' id='previous' disabled={disabled} onClick={(e) => prevClick(e)}> previous </button>
-            {[...Array(pages)].map((page, i) => <button className='btn' key={i} id={i} onClick={(e) => onClick(e)}> {i + 1} </button>)}
+            {[...Array(pages)].map((page, i) => <button disabled={disabled} className='btn' key={i} id={i} onClick={(e) => onClick(e)}> {i + 1} </button>)}
             <button className='btn' id='next' disabled={disabled} onClick={(e) => nextClick(e)}> next </button>
         </div>
     )
