@@ -9,6 +9,7 @@ export default function FilterPanel({ states, onSelectChange }) {
 
     return (
         <select onChange={(e) => handleOnChange(e)} className='filter-panel'>
+            <option value='all'>All</option>
             {states.length !== 0 ?
                 states.map((state, i) => <option key={i} value={state}>{state}</option>) : null}
         </select>

@@ -53,7 +53,7 @@ function App() {
 
   const filterClients = (clients) => {
     let filtered = [...clients]
-    return selectValue !== '' ? filtered.filter(client => client.state === selectValue) : filtered
+    return selectValue === '' || selectValue === 'all' ? filtered : filtered.filter(client => client.state === selectValue)
   }
 
   const setSortIconStyle = (elem) => {
