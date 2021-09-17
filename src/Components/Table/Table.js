@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Loader from '../Loader/Loader'
 import PageControls from '../PageControls/PageControls';
 import './Table.scss'
+import notFoundIcon from './assets/detective.png'
 
 export default function Table({ clientsToRender, getSortedField, getClientId, getSortIcon }) {
 
@@ -41,10 +42,22 @@ export default function Table({ clientsToRender, getSortedField, getClientId, ge
     const renderTableBody = () => {
         let a = page === 0 ? page : page * 20
         let b = 20 * (page + 1)
+        if (clientsToRender.length === 0) {
+            return (
+                <>
+                    <tr className='empty'>
+                        <td colSpan='6'> <img className='not-found-icon' src={notFoundIcon} alt='not-found-icon' /></td>
+                    </tr>
+                    <tr className='empty'>
+                        <td colSpan='6'> Whoops! No clients were found... </td>
+                    </tr>
+                </>
+            )
+        }
         return clientsToRender.slice(a, b).map((client, i) => {
             const { id, firstName, lastName, email, phone, state } = client
             return (
-                <tr id={id} key={i} onClick={(e) => onRowClick(e)}>
+                <tr className='table-row' id={id} key={i} onClick={(e) => onRowClick(e)}>
                     <td>{id}</td>
                     <td>{firstName}</td>
                     <td>{lastName}</td>

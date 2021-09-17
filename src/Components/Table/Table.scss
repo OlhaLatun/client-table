@@ -46,14 +46,17 @@
     }
 
     .table-body {
-        tr:nth-child(odd) {
+        .table-row:nth-child(odd) {
             background: linear-gradient(18deg, rgba(193,84,213, 0.3) 25%, rgba(144,37,171,0.3) 75%);    
         }
-        tr:nth-child(even) {
+        .table-row:nth-child(even) {
             background: linear-gradient(18deg, rgba(142, 140, 143, 0.3) 25%, rgba(194, 189, 194, 0.3) 75%);    
         }
         tr td {
         padding: 0.5rem;
         }
+        .not-found-icon {
+                width: 100px;
+        }   
     }
 }
