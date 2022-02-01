@@ -1,7 +1,7 @@
 export default class APIservice {
 
     async getData() {
-        let response = await fetch('https://itrex-react-lab-files.s3.eu-central-1.amazonaws.com/react-test-api.json')
+        let response = await fetch('https://my-json-server.typicode.com/OlhaLatun/client-db')
         if (!response.ok) {
             throw new Error('Could not fetch data')
         }
