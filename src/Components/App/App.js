@@ -11,8 +11,6 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const [selectValue, setSelectValue] = useState('');
   const [states, setStates] = useState([]);
-  const [clientID, setClientId] = useState(null);
-
   const api = new APIservice();
 
   useEffect(() => {
@@ -25,10 +23,7 @@ function App() {
       .then((filtered) => sortClients(sortConfig, filtered))
       .then((sorted) => searchClients(sorted))
       .then((searched) => setClients(searched));
-
-    api.getDescriptionData()
-      .then((data) => setClient(data.find((item) => item.id === clientID)));
-  }, [sortConfig, searchValue, selectValue, clientID]);
+  }, [sortConfig, searchValue, selectValue]);
 
   function sortClients(config, items) {
     const sorted = [...items];
@@ -85,7 +80,6 @@ function App() {
         getSortIcon={setSortIconStyle}
         getSortedField={getSortConfig}
       />
-      {client ? <DescriptionPanel client={client} /> : null}
     </div>
   );
 }
