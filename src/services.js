@@ -3,20 +3,21 @@ const URL = 'https://olhalatun.github.io/data/db.json';
 export default class APIservice {
     async getData() {
         const response = await fetch(URL);
+
         if (!response.ok) {
             throw new Error('Could not fetch data');
         }
-        return response.json();
+        return await response.clone().json();
     }
 
     async getTableData() {
-        const clients = await this.getData();
-        return clients.map(this.formatTableData);
+        const data = await this.getData();
+        return data.clients.map(this.formatTableData);
     }
 
     async getDescriptionData() {
-        const clients = await this.getData();
-        return clients.map(this.formatDescriptionData);
+        const data = await this.getData();
+        return data.clients.map(this.formatDescriptionData);
     }
 
     formatTableData = (client) => ({
