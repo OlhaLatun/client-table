@@ -1,4 +1,4 @@
-const URL = 'http://localhost:3000/clients';
+const URL = 'https://olhalatun.github.io/data/db.json';
 
 export default class APIservice {
     async getData() {
