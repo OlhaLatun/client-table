@@ -3,7 +3,6 @@ import { React, useState, useEffect } from 'react';
 import Table from '../Table/Table';
 import SearchPanel from '../SearchPanel/SearchPanel';
 import FilterPanel from '../FilterPanel/FilterPanel';
-import DescriptionPanel from '../DescriptionPanel/DescriptionPanel';
 import APIservice from '../../services';
 
 function App() {
