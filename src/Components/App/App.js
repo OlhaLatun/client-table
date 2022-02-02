@@ -13,7 +13,7 @@ function App() {
   const [selectValue, setSelectValue] = useState('');
   const [states, setStates] = useState([]);
   const [clientID, setClientId] = useState(null);
-  const [client, setClient] = useState(null);
+
   const api = new APIservice();
 
   useEffect(() => {
@@ -85,7 +85,6 @@ function App() {
         clientsToRender={clients}
         getSortIcon={setSortIconStyle}
         getSortedField={getSortConfig}
-        getClientId={setClientId}
       />
       {client ? <DescriptionPanel client={client} /> : null}
     </div>

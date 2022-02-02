@@ -15,15 +15,11 @@ export default function Table({
     getSortIcon(target);
   };
 
-  const onRowClick = ({ currentTarget }) => {
-    getClientId(+currentTarget.id);
-  };
-
   return (
     <>
       <table className='table'>
         <TableHead handleClick={onSortClick} />
-        {clientsToRender ? <TableBody data={clientsToRender} page={page} handleClick={onRowClick} /> : <Loader />}
+        {clientsToRender ? <TableBody data={clientsToRender} page={page} /> : <Loader />}
       </table >
       <PageControls clientsNumber={clientsToRender ? clientsToRender.length : 1} getPage={setPage} />
     </>
