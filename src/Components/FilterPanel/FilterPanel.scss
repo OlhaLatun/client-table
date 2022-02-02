@@ -1,7 +1,7 @@
 $bg-color:  #770f7d;
 .filter-panel {
     position: relative;
-    border: none;
+    border-right: 20px solid $bg-color;
     outline: none;
     border-radius: 20px;
     padding: 15px 25px;
