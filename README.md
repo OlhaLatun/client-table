@@ -3,15 +3,15 @@ Client management table made with ReactJS.
 The goal was to learn functional components and understand how to manage state with hooks.
 The application is made on the basis of Pro-React-Redux course [https://www.udemy.com/course/pro-react-redux/](https://www.udemy.com/course/pro-react-redux/)
 
-img ![bg](client-table/src/Assets/bg.png)
+img ![bg](src/Assets/bg.png)
 
 ## Features
-render client table
-search clients 
-filter clients 
-sort clients in each column (ascending/descending order)
-pagination feature
-handling UI when data is unavaliable 
+- render client table 
+- search clients 
+- filter clients 
+- sort clients in each column (ascending/descending order)
+- pagination feature
+- handling UI when data is unavaliable 
 
 ## Installation 
 
